@@ -124,7 +124,7 @@ namespace QuanLyChamSocKH
                 txtTenkhachhang1.Text = "";
                 txtDiachi1.Text = "";
                 txtCmtnd1.Text = "";
-                MessageBox.Show("Thêm mới thành công !", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Thêm mới thành công !\nChú ý: Mật khẩu đăng nhập website đánh giá của khách hàng trùng với Số điện thoại", "Thông báo", MessageBoxButtons.OK);
             }
             catch
             {
@@ -448,6 +448,29 @@ namespace QuanLyChamSocKH
                 {
                     MessageBox.Show("Tìm kiếm không thành công vui lòng kiểm tra lại dữ liệu đã nhập !", "Thông báo", MessageBoxButtons.OK);
                 }
+            }
+        }
+
+        private void buttonX1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Bạm muốn reset mật khẩu khách hàng?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    KetNoi.openketnoi();
+                    string query = "UPDATE dbo.KhachHang SET MatKhau = SDT WHERE MaKH = @MaKH;";
+                    using (SqlCommand cmd = new SqlCommand(query, KetNoi.con))
+                    {
+                        cmd.Parameters.AddWithValue("@MaKH", txtMakhachhang1.Text);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Reset mật khẩu thành công. Mật khẩu trùng với SDT của khách hàng!");
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
     }

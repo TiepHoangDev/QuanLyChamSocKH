@@ -37,21 +37,6 @@
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CMTND = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new DevComponents.DotNetBar.TabControl();
-            this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
-            this.txtCmtnd1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtTenkhachhang1 = new System.Windows.Forms.TextBox();
-            this.txtDiachi1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtSdt1 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtMakhachhang1 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btnXoa = new DevComponents.DotNetBar.ButtonX();
-            this.btnThem = new DevComponents.DotNetBar.ButtonX();
-            this.btnSua = new DevComponents.DotNetBar.ButtonX();
-            this.tabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
             this.gvKhachhang = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -117,23 +102,39 @@
             this.btnThemhotro = new DevComponents.DotNetBar.ButtonX();
             this.btnSuahotro = new DevComponents.DotNetBar.ButtonX();
             this.tabItem3 = new DevComponents.DotNetBar.TabItem(this.components);
-            this.ribbonControl1 = new DevComponents.DotNetBar.RibbonControl();
-            this.btnRefresh = new DevComponents.DotNetBar.ButtonX();
+            this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.btnTimkiemkh = new DevComponents.DotNetBar.ButtonX();
             this.txtTenkhachhang3 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtSdt3 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.txtCmtnd1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtTenkhachhang1 = new System.Windows.Forms.TextBox();
+            this.txtDiachi1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtSdt1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtMakhachhang1 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnXoa = new DevComponents.DotNetBar.ButtonX();
+            this.btnThem = new DevComponents.DotNetBar.ButtonX();
+            this.btnSua = new DevComponents.DotNetBar.ButtonX();
+            this.tabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
+            this.ribbonControl1 = new DevComponents.DotNetBar.RibbonControl();
+            this.btnRefresh = new DevComponents.DotNetBar.ButtonX();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.gvKhachhang1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).BeginInit();
             this.tabControl1.SuspendLayout();
-            this.tabControlPanel2.SuspendLayout();
             this.tabControlPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvKhachhang)).BeginInit();
             this.tabControlPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvHotro)).BeginInit();
             this.groupPanel2.SuspendLayout();
+            this.tabControlPanel2.SuspendLayout();
             this.groupPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -222,9 +223,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
             this.tabControl1.CanReorderTabs = true;
-            this.tabControl1.Controls.Add(this.tabControlPanel3);
             this.tabControl1.Controls.Add(this.tabControlPanel2);
             this.tabControl1.Controls.Add(this.tabControlPanel1);
+            this.tabControl1.Controls.Add(this.tabControlPanel3);
             this.tabControl1.Location = new System.Drawing.Point(4, 49);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
@@ -237,180 +238,6 @@
             this.tabControl1.Tabs.Add(this.tabItem3);
             this.tabControl1.Text = "tabControl1";
             this.tabControl1.Click += new System.EventHandler(this.tabControl1_Click);
-            // 
-            // tabControlPanel2
-            // 
-            this.tabControlPanel2.Controls.Add(this.groupPanel1);
-            this.tabControlPanel2.Controls.Add(this.gvKhachhang1);
-            this.tabControlPanel2.Controls.Add(this.txtCmtnd1);
-            this.tabControlPanel2.Controls.Add(this.label1);
-            this.tabControlPanel2.Controls.Add(this.txtTenkhachhang1);
-            this.tabControlPanel2.Controls.Add(this.txtDiachi1);
-            this.tabControlPanel2.Controls.Add(this.label2);
-            this.tabControlPanel2.Controls.Add(this.label5);
-            this.tabControlPanel2.Controls.Add(this.txtSdt1);
-            this.tabControlPanel2.Controls.Add(this.label6);
-            this.tabControlPanel2.Controls.Add(this.txtMakhachhang1);
-            this.tabControlPanel2.Controls.Add(this.label9);
-            this.tabControlPanel2.Controls.Add(this.btnXoa);
-            this.tabControlPanel2.Controls.Add(this.btnThem);
-            this.tabControlPanel2.Controls.Add(this.btnSua);
-            this.tabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel2.Location = new System.Drawing.Point(0, 26);
-            this.tabControlPanel2.Name = "tabControlPanel2";
-            this.tabControlPanel2.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel2.Size = new System.Drawing.Size(1297, 482);
-            this.tabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
-            this.tabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
-            this.tabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-            this.tabControlPanel2.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel2.Style.GradientAngle = 90;
-            this.tabControlPanel2.TabIndex = 2;
-            this.tabControlPanel2.TabItem = this.tabItem2;
-            // 
-            // txtCmtnd1
-            // 
-            this.txtCmtnd1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtCmtnd1.Location = new System.Drawing.Point(560, 149);
-            this.txtCmtnd1.Name = "txtCmtnd1";
-            this.txtCmtnd1.Size = new System.Drawing.Size(137, 20);
-            this.txtCmtnd1.TabIndex = 96;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.Location = new System.Drawing.Point(440, 147);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 23);
-            this.label1.TabIndex = 95;
-            this.label1.Text = "CMTND";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtTenkhachhang1
-            // 
-            this.txtTenkhachhang1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtTenkhachhang1.Location = new System.Drawing.Point(561, 100);
-            this.txtTenkhachhang1.Name = "txtTenkhachhang1";
-            this.txtTenkhachhang1.Size = new System.Drawing.Size(136, 20);
-            this.txtTenkhachhang1.TabIndex = 94;
-            // 
-            // txtDiachi1
-            // 
-            this.txtDiachi1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtDiachi1.Location = new System.Drawing.Point(850, 98);
-            this.txtDiachi1.Name = "txtDiachi1";
-            this.txtDiachi1.Size = new System.Drawing.Size(137, 20);
-            this.txtDiachi1.TabIndex = 93;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.Location = new System.Drawing.Point(725, 98);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 23);
-            this.label2.TabIndex = 90;
-            this.label2.Text = "Địa Chỉ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.Location = new System.Drawing.Point(440, 98);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 23);
-            this.label5.TabIndex = 87;
-            this.label5.Text = "Tên Khách Hàng";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtSdt1
-            // 
-            this.txtSdt1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtSdt1.Location = new System.Drawing.Point(847, 44);
-            this.txtSdt1.Name = "txtSdt1";
-            this.txtSdt1.Size = new System.Drawing.Size(140, 20);
-            this.txtSdt1.TabIndex = 92;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.Location = new System.Drawing.Point(725, 42);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 23);
-            this.label6.TabIndex = 89;
-            this.label6.Text = "Số Điện Thoại";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtMakhachhang1
-            // 
-            this.txtMakhachhang1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtMakhachhang1.Enabled = false;
-            this.txtMakhachhang1.Location = new System.Drawing.Point(564, 44);
-            this.txtMakhachhang1.Name = "txtMakhachhang1";
-            this.txtMakhachhang1.Size = new System.Drawing.Size(134, 20);
-            this.txtMakhachhang1.TabIndex = 91;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label9.Location = new System.Drawing.Point(440, 42);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 23);
-            this.label9.TabIndex = 88;
-            this.label9.Text = "Mã Khách Hàng";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnXoa.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnXoa.Image = global::QuanLyChamSocKH.Properties.Resources.delete3;
-            this.btnXoa.ImageFixedSize = new System.Drawing.Size(25, 25);
-            this.btnXoa.ImagePosition = DevComponents.DotNetBar.eImagePosition.Right;
-            this.btnXoa.Location = new System.Drawing.Point(933, 184);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(89, 29);
-            this.btnXoa.TabIndex = 73;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnThem
-            // 
-            this.btnThem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnThem.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnThem.Image = global::QuanLyChamSocKH.Properties.Resources.add;
-            this.btnThem.ImageFixedSize = new System.Drawing.Size(25, 25);
-            this.btnThem.ImagePosition = DevComponents.DotNetBar.eImagePosition.Right;
-            this.btnThem.Location = new System.Drawing.Point(398, 184);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(89, 29);
-            this.btnThem.TabIndex = 72;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnSua.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSua.Image = global::QuanLyChamSocKH.Properties.Resources.check;
-            this.btnSua.ImageFixedSize = new System.Drawing.Size(25, 25);
-            this.btnSua.ImagePosition = DevComponents.DotNetBar.eImagePosition.Right;
-            this.btnSua.Location = new System.Drawing.Point(651, 184);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(89, 29);
-            this.btnSua.TabIndex = 70;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // tabItem2
-            // 
-            this.tabItem2.AttachedControl = this.tabControlPanel2;
-            this.tabItem2.Name = "tabItem2";
-            this.tabItem2.Text = "Cập Nhật Thông Tin";
             // 
             // tabControlPanel1
             // 
@@ -456,10 +283,10 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
             this.gvKhachhang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
-            this.gvKhachhang.Location = new System.Drawing.Point(6, 184);
+            this.gvKhachhang.Location = new System.Drawing.Point(6, 190);
             this.gvKhachhang.Name = "gvKhachhang";
             this.gvKhachhang.ReadOnly = true;
-            this.gvKhachhang.Size = new System.Drawing.Size(1285, 234);
+            this.gvKhachhang.Size = new System.Drawing.Size(1285, 228);
             this.gvKhachhang.TabIndex = 97;
             this.gvKhachhang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvKhachhang_CellContentClick_1);
             this.gvKhachhang.Click += new System.EventHandler(this.gvKhachhang_Click);
@@ -807,7 +634,7 @@
             "Chưa Hoàn Thành",
             "Đang Sửa Chữa",
             "Đã Hoàn Thành"});
-            this.cbbTinhtrang1.Location = new System.Drawing.Point(154, 74);
+            this.cbbTinhtrang1.Location = new System.Drawing.Point(148, 74);
             this.cbbTinhtrang1.Name = "cbbTinhtrang1";
             this.cbbTinhtrang1.Size = new System.Drawing.Size(131, 21);
             this.cbbTinhtrang1.TabIndex = 70;
@@ -817,7 +644,7 @@
             // 
             this.label19.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label19.BackColor = System.Drawing.SystemColors.Control;
-            this.label19.Location = new System.Drawing.Point(41, 72);
+            this.label19.Location = new System.Drawing.Point(35, 72);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(107, 23);
             this.label19.TabIndex = 69;
@@ -1137,35 +964,38 @@
             this.tabItem3.Name = "tabItem3";
             this.tabItem3.Text = "Hỗ Trợ";
             // 
-            // ribbonControl1
+            // tabControlPanel2
             // 
-            this.ribbonControl1.CaptionVisible = true;
-            this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ribbonControl1.ForeColor = System.Drawing.Color.Snow;
-            this.ribbonControl1.KeyTipsFont = new System.Drawing.Font("Tahoma", 7F);
-            this.ribbonControl1.Location = new System.Drawing.Point(4, 1);
-            this.ribbonControl1.Name = "ribbonControl1";
-            this.ribbonControl1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 2);
-            this.ribbonControl1.Size = new System.Drawing.Size(1297, 48);
-            this.ribbonControl1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.ribbonControl1.TabGroupHeight = 14;
-            this.ribbonControl1.TabIndex = 53;
-            this.ribbonControl1.Text = "Thông Tin";
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnRefresh.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnRefresh.Image = global::QuanLyChamSocKH.Properties.Resources.refresh;
-            this.btnRefresh.ImageFixedSize = new System.Drawing.Size(25, 25);
-            this.btnRefresh.ImagePosition = DevComponents.DotNetBar.eImagePosition.Right;
-            this.btnRefresh.Location = new System.Drawing.Point(4, 583);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(1297, 29);
-            this.btnRefresh.TabIndex = 91;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            this.tabControlPanel2.Controls.Add(this.buttonX1);
+            this.tabControlPanel2.Controls.Add(this.groupPanel1);
+            this.tabControlPanel2.Controls.Add(this.gvKhachhang1);
+            this.tabControlPanel2.Controls.Add(this.txtCmtnd1);
+            this.tabControlPanel2.Controls.Add(this.label1);
+            this.tabControlPanel2.Controls.Add(this.txtTenkhachhang1);
+            this.tabControlPanel2.Controls.Add(this.txtDiachi1);
+            this.tabControlPanel2.Controls.Add(this.label2);
+            this.tabControlPanel2.Controls.Add(this.label5);
+            this.tabControlPanel2.Controls.Add(this.txtSdt1);
+            this.tabControlPanel2.Controls.Add(this.label6);
+            this.tabControlPanel2.Controls.Add(this.txtMakhachhang1);
+            this.tabControlPanel2.Controls.Add(this.label9);
+            this.tabControlPanel2.Controls.Add(this.btnXoa);
+            this.tabControlPanel2.Controls.Add(this.btnThem);
+            this.tabControlPanel2.Controls.Add(this.btnSua);
+            this.tabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPanel2.Location = new System.Drawing.Point(0, 26);
+            this.tabControlPanel2.Name = "tabControlPanel2";
+            this.tabControlPanel2.Padding = new System.Windows.Forms.Padding(1);
+            this.tabControlPanel2.Size = new System.Drawing.Size(1297, 482);
+            this.tabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
+            this.tabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
+            this.tabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
+            this.tabControlPanel2.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tabControlPanel2.Style.GradientAngle = 90;
+            this.tabControlPanel2.TabIndex = 2;
+            this.tabControlPanel2.TabItem = this.tabItem2;
             // 
             // groupPanel1
             // 
@@ -1253,6 +1083,193 @@
             this.labelX4.TabIndex = 0;
             this.labelX4.Text = "Số Điện Thoại";
             // 
+            // txtCmtnd1
+            // 
+            this.txtCmtnd1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtCmtnd1.Location = new System.Drawing.Point(560, 149);
+            this.txtCmtnd1.Name = "txtCmtnd1";
+            this.txtCmtnd1.Size = new System.Drawing.Size(137, 20);
+            this.txtCmtnd1.TabIndex = 96;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.Location = new System.Drawing.Point(440, 147);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 95;
+            this.label1.Text = "CMTND";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtTenkhachhang1
+            // 
+            this.txtTenkhachhang1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtTenkhachhang1.Location = new System.Drawing.Point(561, 100);
+            this.txtTenkhachhang1.Name = "txtTenkhachhang1";
+            this.txtTenkhachhang1.Size = new System.Drawing.Size(136, 20);
+            this.txtTenkhachhang1.TabIndex = 94;
+            // 
+            // txtDiachi1
+            // 
+            this.txtDiachi1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtDiachi1.Location = new System.Drawing.Point(850, 98);
+            this.txtDiachi1.Name = "txtDiachi1";
+            this.txtDiachi1.Size = new System.Drawing.Size(137, 20);
+            this.txtDiachi1.TabIndex = 93;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.Location = new System.Drawing.Point(725, 98);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 23);
+            this.label2.TabIndex = 90;
+            this.label2.Text = "Địa Chỉ";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.Location = new System.Drawing.Point(440, 98);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 23);
+            this.label5.TabIndex = 87;
+            this.label5.Text = "Tên Khách Hàng";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtSdt1
+            // 
+            this.txtSdt1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtSdt1.Location = new System.Drawing.Point(847, 44);
+            this.txtSdt1.Name = "txtSdt1";
+            this.txtSdt1.Size = new System.Drawing.Size(140, 20);
+            this.txtSdt1.TabIndex = 92;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.Location = new System.Drawing.Point(725, 42);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(100, 23);
+            this.label6.TabIndex = 89;
+            this.label6.Text = "Số Điện Thoại";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtMakhachhang1
+            // 
+            this.txtMakhachhang1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtMakhachhang1.Enabled = false;
+            this.txtMakhachhang1.Location = new System.Drawing.Point(564, 44);
+            this.txtMakhachhang1.Name = "txtMakhachhang1";
+            this.txtMakhachhang1.Size = new System.Drawing.Size(134, 20);
+            this.txtMakhachhang1.TabIndex = 91;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label9.Location = new System.Drawing.Point(440, 42);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(100, 23);
+            this.label9.TabIndex = 88;
+            this.label9.Text = "Mã Khách Hàng";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnXoa.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnXoa.Image = global::QuanLyChamSocKH.Properties.Resources.delete3;
+            this.btnXoa.ImageFixedSize = new System.Drawing.Size(25, 25);
+            this.btnXoa.ImagePosition = DevComponents.DotNetBar.eImagePosition.Right;
+            this.btnXoa.Location = new System.Drawing.Point(933, 184);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(89, 29);
+            this.btnXoa.TabIndex = 73;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnThem.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnThem.Image = global::QuanLyChamSocKH.Properties.Resources.add;
+            this.btnThem.ImageFixedSize = new System.Drawing.Size(25, 25);
+            this.btnThem.ImagePosition = DevComponents.DotNetBar.eImagePosition.Right;
+            this.btnThem.Location = new System.Drawing.Point(398, 184);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(89, 29);
+            this.btnThem.TabIndex = 72;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSua.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnSua.Image = global::QuanLyChamSocKH.Properties.Resources.check;
+            this.btnSua.ImageFixedSize = new System.Drawing.Size(25, 25);
+            this.btnSua.ImagePosition = DevComponents.DotNetBar.eImagePosition.Right;
+            this.btnSua.Location = new System.Drawing.Point(651, 184);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(89, 29);
+            this.btnSua.TabIndex = 70;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // tabItem2
+            // 
+            this.tabItem2.AttachedControl = this.tabControlPanel2;
+            this.tabItem2.Name = "tabItem2";
+            this.tabItem2.Text = "Cập Nhật Thông Tin";
+            // 
+            // ribbonControl1
+            // 
+            this.ribbonControl1.CaptionVisible = true;
+            this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ribbonControl1.ForeColor = System.Drawing.Color.Snow;
+            this.ribbonControl1.KeyTipsFont = new System.Drawing.Font("Tahoma", 7F);
+            this.ribbonControl1.Location = new System.Drawing.Point(4, 1);
+            this.ribbonControl1.Name = "ribbonControl1";
+            this.ribbonControl1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 2);
+            this.ribbonControl1.Size = new System.Drawing.Size(1297, 48);
+            this.ribbonControl1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.ribbonControl1.TabGroupHeight = 14;
+            this.ribbonControl1.TabIndex = 53;
+            this.ribbonControl1.Text = "Thông Tin";
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnRefresh.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnRefresh.Image = global::QuanLyChamSocKH.Properties.Resources.refresh;
+            this.btnRefresh.ImageFixedSize = new System.Drawing.Size(25, 25);
+            this.btnRefresh.ImagePosition = DevComponents.DotNetBar.eImagePosition.Right;
+            this.btnRefresh.Location = new System.Drawing.Point(4, 583);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(1297, 29);
+            this.btnRefresh.TabIndex = 91;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // buttonX1
+            // 
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.Image = global::QuanLyChamSocKH.Properties.Resources.check;
+            this.buttonX1.ImageFixedSize = new System.Drawing.Size(25, 25);
+            this.buttonX1.ImagePosition = DevComponents.DotNetBar.eImagePosition.Right;
+            this.buttonX1.Location = new System.Drawing.Point(1149, 184);
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Size = new System.Drawing.Size(136, 29);
+            this.buttonX1.TabIndex = 121;
+            this.buttonX1.Text = "Reset mật khẩu";
+            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
+            // 
             // KhachHang
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -1269,8 +1286,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvKhachhang1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            this.tabControlPanel2.ResumeLayout(false);
-            this.tabControlPanel2.PerformLayout();
             this.tabControlPanel1.ResumeLayout(false);
             this.tabControlPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvKhachhang)).EndInit();
@@ -1278,6 +1293,8 @@
             this.tabControlPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvHotro)).EndInit();
             this.groupPanel2.ResumeLayout(false);
+            this.tabControlPanel2.ResumeLayout(false);
+            this.tabControlPanel2.PerformLayout();
             this.groupPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1381,5 +1398,6 @@
         private DevComponents.DotNetBar.Controls.TextBoxX txtSdt3;
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.LabelX labelX4;
+        private DevComponents.DotNetBar.ButtonX buttonX1;
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Web.Models;
@@ -20,7 +21,7 @@ namespace Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(DanhGia danhGia)
+        public async Task<ActionResult> Index(DanhGia danhGia)
         {
             try
             {
@@ -33,7 +34,11 @@ namespace Web.Controllers
                     string cmdText = "INSERT INTO [dbo].[DanhGia] ([SDT] ,[NoiDungDG] ,[NgayDG]) VALUES (N'" + danhGia.SDT + "' , N'" + danhGia.NoiDungDG + "', N'" + danhGia.NgayDG.ToString("yyyy-MM-dd") + "');";
                     SqlCommand cmd = new SqlCommand(cmdText, con);
                     con.Open();
-                    cmd.ExecuteNonQuery();
+                    if (cmd.ExecuteNonQuery() > 0)
+                    {
+                        string content = string.Format("Xin chào {0}, cảm ơn bạn đã gửi đánh giá cho chúng tôi! <br/> Nếu bạn không phải người gửi đóng góp, vui lòng bỏ qua mail này!", danhGia.HoTen);
+                        await EmailSender.SendGMail(danhGia.Email, content);
+                    }
                     con.Close();
                     con.Dispose();
                 }
