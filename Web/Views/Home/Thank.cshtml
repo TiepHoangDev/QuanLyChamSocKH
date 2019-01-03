@@ -50,15 +50,6 @@
                             <li class="nav-item active">
                                 <a class="nav-link" href="/">Trang chủ <span class="sr-only">(current)</span></a>
                             </li>
-                            <li class="nav-item">
-                                <a href="#about" class="nav-link scroll">Giới thiệu</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#service" class="nav-link scroll">Dịch vụ</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#contact" class="nav-link scroll">Liên hệ</a>
-                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -126,8 +117,16 @@
     </div>
     <!-- //banner -->
     <div style="background-image: url('/web/images/bg-section-1.png'); height: 500px; background-size: contain; background-repeat: no-repeat">
-        <h1 style="text-align: center; line-height: 500px">Cảm ơn đóng góp của bạn.</h1>
-        <p>@TempData["message"]</p>
+        @if (string.IsNullOrWhiteSpace(TempData["message"] + ""))
+        {
+            <h1 style="text-align: center; line-height: 500px">Chúng tôi đã ghi nhận đóng góp. Cảm ơn đóng góp của bạn.</h1>
+
+        }
+        else
+        {
+            <h1 style="text-align: center; margin-top: 250px">Đã xảy ra lỗi trong qua trình ghi nhận đánh giá.</h1>
+            <p style="text-align: center;">@TempData["message"]</p>
+        }
     </div>
     <footer class="py-lg-5 py-md-4 py-4">
         <div class="container">

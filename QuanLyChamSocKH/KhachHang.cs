@@ -41,7 +41,7 @@ namespace QuanLyChamSocKH
         }
         private bool kiemtra()
         {
-            if (txtSdt1.Text == "" )
+            if (txtSdt1.Text == "")
             {
                 return false;
             }
@@ -62,7 +62,7 @@ namespace QuanLyChamSocKH
             txtTennhanvien1.Enabled = false;
             txtMaYC1.Enabled = false;
             txtKhachHang1.Enabled = false;
-            if (Main.ChucVu ==PhanQuyen.NhanVienKiThuat)
+            if (Main.ChucVu == PhanQuyen.NhanVienKiThuat)
             {
                 btnThemhotro.Enabled = false;
                 btnXoahotro.Enabled = false;
@@ -87,7 +87,7 @@ namespace QuanLyChamSocKH
             txtTenkhachhang1.Text = gvKhachhang1.Rows[t].Cells[2].Value.ToString();
             txtDiachi1.Text = gvKhachhang1.Rows[t].Cells[3].Value.ToString();
             txtCmtnd1.Text = gvKhachhang1.Rows[t].Cells[4].Value.ToString();
- 
+
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -117,7 +117,7 @@ namespace QuanLyChamSocKH
                 cmd.Parameters.AddWithValue("@tenkhachhang", txtTenkhachhang1.Text);
                 cmd.Parameters.AddWithValue("@diachi", txtDiachi1.Text);
                 cmd.Parameters.AddWithValue("@cmtnd", txtCmtnd1.Text);
-                
+
                 cmd.ExecuteNonQuery();
                 load();
                 txtSdt1.Text = "";
@@ -196,7 +196,7 @@ namespace QuanLyChamSocKH
             }
         }
 
-        
+
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
@@ -226,7 +226,7 @@ namespace QuanLyChamSocKH
             txtNoidungyc1.Text = gvHotro.Rows[t].Cells[2].Value.ToString();
             txtNoidungph1.Text = gvHotro.Rows[t].Cells[3].Value.ToString();
             cbbtinhtrang.Text = gvHotro.Rows[t].Cells[4].Value.ToString();
-            DateTime dt1 = DateTime.ParseExact(gvHotro.Rows[t].Cells[5].Value.ToString(), "dd/MM/yyyy hh:mm:ss", CultureInfo.InvariantCulture);
+            DateTime dt1 = DateTime.ParseExact(gvHotro.Rows[t].Cells[5].Value.ToString(), new string[] { "dd/MM/yyyy hh:mm:ss", "yyyy-MM-dd hh:mm:ss" }, CultureInfo.InvariantCulture, DateTimeStyles.None);
             datengay1.Value = dt1;
             txtThoiGianHT1.Text = gvHotro.Rows[t].Cells[6].Value.ToString();
             txtNguyennhan1.Text = gvHotro.Rows[t].Cells[7].Value.ToString();

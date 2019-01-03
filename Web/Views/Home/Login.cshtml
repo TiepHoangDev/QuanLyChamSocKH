@@ -1,0 +1,151 @@
+﻿<!-- Modal -->
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">ĐĂNG NHẬP</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Số điện thoại</label>
+                    <input name="SDT" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Số điện thoại.">
+                    <small id="emailHelp" class="form-text text-muted">Số điện thoại bạn đã đăng kí trên hệ thống.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" name="password" placeholder="Password">
+                </div>
+                <div>
+                    <p class="text-danger form-group" id="error-login"></p>
+                </div>
+                <button type="submit" class="btn btn-primary" id="btnlogin" onclick="login()">Đăng nhập <i class="fa spinner-border" id="login-loading"></i></button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+            </div>
+            <div class="modal-footer">
+                VTC Suport v1.0.0
+            </div>
+        </div>
+    </div>
+    <script>
+        $('#login-loading').hide();
+        function login() {
+            $('#login-loading').show();
+            $.ajax({
+                url: '@Url.Action("Login")',
+                type: 'POST',
+                data: {
+                    SDT: $('[name="SDT"]').val(),
+                    password: $('[name="password"]').val(),
+                },
+                success: (d) => {
+                    $('#error-login').text(d.data.message);
+                    if (d.code == true) {
+                        window.location.reload();
+                        alert(d.data.message);
+                    } else {
+                        alert(d.data.message);
+                    }
+                },
+                error: () => {
+                    alert("Đã có lỗi xảy ra.");
+                },
+                complete: () => {
+                    $('#login-loading').hide();
+                }
+            });
+        }
+    </script>
+</div>
+
+<div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">ĐĂNG XUẤT</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="form-group">
+                    Cảm ơn quý khách đã tin tưởng sử dụng dịch vụ của chúng tôi!
+                    <br />
+                    Quý khách muốn đăng xuất khỏi hệ thống?
+                </p>
+                <a href="@Url.Action("Logout")" class="btn btn-primary">OK! Đăng xuất.</a>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+            </div>
+            <div class="modal-footer">
+                VTC Suport v1.0.0
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="doimatkhau" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">ĐỔI MẬT KHẨU</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Mật khẩu cũ</label>
+                    <input type="password" class="form-control" name="oldpassword" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Mật khẩu mới</label>
+                    <input type="password" class="form-control" name="newpassword" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Xác nhận mật khẩu mới</label>
+                    <input type="password" class="form-control" name="repassword" placeholder="Password">
+                </div>
+                <div>
+                    <p class="text-danger form-group" id="error-doimatkhau"></p>
+                </div>
+                <button type="submit" class="btn btn-primary" id="btndoimatkhau" onclick="doimatkhau()">Đổi mật khẩu <i class="fa spinner-border" id="doimatkhau-loading"></i></button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+            </div>
+            <div class="modal-footer">
+                VTC Suport v1.0.0
+            </div>
+        </div>
+    </div>
+    <script>
+        $('#doimatkhau-loading').hide();
+        function doimatkhau() {
+            $('#doimatkhau-loading').show();
+            $.ajax({
+                url: '@Url.Action("DoiMatKhau")',
+                type: 'POST',
+                data: {
+                    oldpassword: $('[name="oldpassword"]').val(),
+                    newpassword: $('[name="newpassword"]').val(),
+                    repassword: $('[name="repassword"]').val(),
+                },
+                success: (d) => {
+                    $('#error-doimatkhau').html(d.data.message);
+                    if (d.code == true) {
+                        alert(d.data.message);
+                        window.location.reload();
+                    } else {
+                        alert("Lỗi nhập liệu, kiểm tra lại!");
+                    }
+                },
+                error: () => {
+                    alert("Đã có lỗi xảy ra.");
+                },
+                complete: () => {
+                    $('#doimatkhau-loading').hide();
+                }
+            });
+        }
+    </script>
+</div>
